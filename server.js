@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.connect('mongodb://localhost/workout', {useNewUrlParser: true});
 
-app.use(express.static("public"));
+app.use(express.static("Develop/public"));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/index.html"))
