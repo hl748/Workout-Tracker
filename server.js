@@ -19,15 +19,15 @@ mongoose.connect('mongodb://localhost/workout', {useNewUrlParser: true});
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "../Develop/public/index.html"))
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"))
   })
 
 app.get('/exercise', (req, res) => {
-  res.sendFile(path.join(__dirname, "../Develop/public/exercise.html"))
+  res.sendFile(path.join(__dirname, "./Develop/public/exercise.html"))
   })
 
 app.get('/stats', (req, res) => {
-  res.sendFile(path.join(__dirname, "../Develop/public/stats.html"))
+  res.sendFile(path.join(__dirname, "./Develop/public/stats.html"))
   })
 
 app.get("/api/workouts", function (req, res) {
